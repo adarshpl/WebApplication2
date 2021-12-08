@@ -1,0 +1,218 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ott platform</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+      <!--icon style sheet-->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/sidebar.css">
+
+
+  
+  </head>
+  <body>
+
+        
+   
+    <div class="bg-img">
+       <img src='/css/ott-platforms-banner.jpg' height=1000vh width=1500vh/> 
+      <div class="content">
+        <header style="font-family:verdana;">OTT PLATFORM</header>
+        <form action="#">
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" required placeholder="Email or Phone">
+          </div>
+          <div class="field space">
+            <span class="fa fa-lock"></span>
+            <input type="password" class="pass-key" required placeholder="Password">
+            <span class="show">SHOW</span>
+          </div>
+          <div class="pass">
+            <a href="#">Forgot Password?</a>
+          </div>
+          <div class="field">
+            <input type="submit" value="LOGIN">
+
+ 
+
+          </div>
+        </form>
+        <div class="login">Or login with</div>
+    
+        <div class="links">
+           
+          <div class="facebook">    
+           <span><b>facebook</b></span>           
+          </div>
+          
+          
+          
+          <div class="instagram">
+              <a href="https://www.instagram.com/">
+            <span>Instagram</span>          
+          </div>
+           </a>
+        </div>
+        <div class="signup">Don't have account?
+          <a href="#">Signup Now</a>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+    <script>
+      const pass_field = document.querySelector('.pass-key');
+      const showBtn = document.querySelector('.show');
+      showBtn.addEventListener('click', function(){
+       if(pass_field.type === "password"){
+         pass_field.type = "text";
+         showBtn.textContent = "HIDE";
+         showBtn.style.color = "#3498db";
+       }else{
+         pass_field.type = "password";
+         showBtn.textContent = "SHOW";
+         showBtn.style.color = "#222";
+       }
+      });
+    </script>
+
+     <!--side bar...................................starting-->
+
+      <div class="sidebar">
+    <div class="all">
+      <!--menu button-->
+      <div class="logo_content">
+
+        <!--profile image-->
+        <div class="logo">
+          <header>
+            <img src="/css/profile.png" alt="">
+            <p>Stream now..</p>
+          </header>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+
+      <ul class="nav_list">
+        <li><a href="#">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a></li>
+
+        <li><a href="#">
+          <i class="bx bx-user"></i>
+          <span class="links_name">User</span>
+        </a></li>
+
+        <li><a href="#">
+          <i class="bx bx-chat"></i>
+          <span class="links_name">Help and support</span>
+        </a></li>
+
+        <li><a href="#">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="links_name">Plans</span>
+        </a></li>
+
+        <li><a href="#">
+          <i class="bx bx-folder"></i>
+          <span class="links_name">Platforms</span>
+        </a></li>
+
+        <li><a href="#">
+          <i class="bx bx-cart-alt"></i>
+          <span class="links_name">Payment</span>
+        </a></li>
+
+        <li><a href="#">
+          <i class="bx bx-heart"></i>
+          <span class="links_name">Check details</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <!--social icon-->
+
+
+    <div class="profile_content">
+      <div class="profile">
+        <div class="links_name">
+          <div class="social-links">
+            <a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+        <!--share button-->
+        <i class="bx bx-share-alt" id="log_out"></i>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!--body background-->
+  <div class="home_content">
+    <div class="text">
+      <!--inner file.......................................................-->
+
+
+
+    </div>
+  </div>
+
+  <script>
+    // active button using javascript
+
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+    let searchBtn = document.querySelector(".bx-search");
+
+    btn.onclick = function(){
+      sidebar.classList.toggle("active");
+
+      if(btn.classList.contains("bx-menu")){
+        btn.classList.replace("bx-menu", "bx-menu-alt-right");
+      }
+      else{
+        btn.classList.replace("bx-menu-alt-right", "bx-menu");
+      }
+    }
+    
+   
+
+  </script>
+
+
+
+
+
+  </body>
+
+
+
+  </html>
+
+   
+
+
